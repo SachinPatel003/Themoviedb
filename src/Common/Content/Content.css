@@ -1,0 +1,18 @@
+.canvas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 51px;
+    width: 51px;
+    color: white;
+    background-color: black;
+    border-radius: 51px;
+    border: 2px solid white;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    position: absolute;
+    top: -40px;
+    left: 10px;
+}
+.cardMedia{
+    margin-bottom: 15px !important;
+}
