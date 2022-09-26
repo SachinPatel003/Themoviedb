@@ -1,6 +1,6 @@
 
 const productiState = {
-    products: []
+    products: [],
   };
 
 
@@ -15,6 +15,31 @@ const productiState = {
   
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 // switch case
 
 // const productiState = {

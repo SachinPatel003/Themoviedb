@@ -11,7 +11,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Header />
-        <Container  sx={{ marginY: 5 }}>
+        <Container sx={{ marginY: 5 }}>
           <Routes>
             <Route path="/" element={<Movies />} exact />
             <Route path="/TVShows" element={<TVshows />} />

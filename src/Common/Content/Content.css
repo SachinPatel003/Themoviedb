@@ -15,4 +15,11 @@
 }
 .cardMedia{
     margin-bottom: 15px !important;
+    height: 250px;
+}
+
+@media (min-width:0px) and (max-width:900px) {
+    .cardMedia {
+        height: 180px;
+    }
 }

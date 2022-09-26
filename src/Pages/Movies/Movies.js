@@ -1,8 +1,10 @@
-import { Grid } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import Content from "../../Common/Content/Content";
 import { fetchMovieContent } from '../../Store/action';
+import Loader from "../../Assets/images/1.gif"
+import "./Movies.css"
 
 const Movies = () => {
 
@@ -14,11 +16,17 @@ const Movies = () => {
   }, [])
   
   const data = useSelector((state) => state.productReducer.products);
+  const status = useSelector((state) => state.productStatus.status);
 
+ 
+
+  if(status === "Loading"){
+    return <Box display="flex" justifyContent="center" className='loader'><img src={Loader} alt="NA..." /></Box>
+  }
 
   return (
-    <Grid flex-wrap container spacing={5}>
-      {data.map((item) => (
+    <Grid container spacing={5}>
+      {(data).map((item) => (
         <Content key={item.id} item={item}/>
       ))}
     </Grid>

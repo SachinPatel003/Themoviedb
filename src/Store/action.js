@@ -1,31 +1,32 @@
 
 export const fetchMovieContent = () => {
   return async (dispatch, getState) => {
+    dispatch({type: "setStatus",payload: "Loading",});
+
     const response = await fetch(
       `https://api.themoviedb.org/3/trending/movie/week?api_key=dd5685fc0c5640abc7ed586478a6ab70`
     );
     const data = await response.json();
 
-    dispatch({
-      type: "setItem",
-      payload: data.results,
-    });
+    dispatch({type: "setItem",payload: data.results,});
+
+    dispatch({type: "setStatus",payload: "Idle",});
   };
 };
 
+
 export const fetchTvContent = () => {
   return async (dispatch, getState) => {
+    dispatch({type: "setStatus",payload: "Loading",});
+
     const response = await fetch(
       "https://api.themoviedb.org/3/trending/tv/week?api_key=dd5685fc0c5640abc7ed586478a6ab70"
     );
     const data = await response.json();
 
-    // console.log(data.results);
+    dispatch({type: "setItem",payload: data.results,});
 
-    dispatch({
-      type: "setItem",
-      payload: data.results,
-    });
+    dispatch({type: "setStatus",payload: "Idle",});
   };
 };
 
