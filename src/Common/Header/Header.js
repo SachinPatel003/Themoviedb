@@ -12,10 +12,10 @@ const Header = () => {
       {/* </Link> */}
       <ul className="items">
         <li className="item">
-          <Link to="/">My Movies</Link>
+          <Link to="/">Movies</Link>
         </li>
         <li className="item">
-          <Link to="/TVShows">My TV Shows</Link>
+          <Link to="/TVShows">TV Shows</Link>
         </li>
       </ul>
     </div>
