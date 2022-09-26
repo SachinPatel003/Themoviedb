@@ -12,7 +12,7 @@ const Header = () => {
       {/* </Link> */}
       <ul className="items">
         <li className="item">
-          <Link to="/">Movies</Link>
+          <Link to="/">Movies Test</Link>
         </li>
         <li className="item">
           <Link to="/TVShows">TV Shows</Link>
